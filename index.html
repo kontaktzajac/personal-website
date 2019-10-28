@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -325,3 +326,167 @@
 </body>
 </html>
 >>>>>>> master
+=======
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="main.css" >
+
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+      function zmiana(view)
+      {
+        var wyswietl = view;
+
+        document.getElementById("o-mnie").style.display = "none";
+        document.getElementById("portfolio").style.display = "none";
+        document.getElementById("kontakt").style.display = "none";
+
+        document.getElementById(wyswietl).style.display = "block";
+
+      }
+    </script>
+
+</head>
+<body onload="zmiana('o-mnie')">
+
+  <header class="myHeader">
+    <div class="container">
+      <div class="row">
+        <div class="foto bg-danger center"></div><br>
+      </div>
+      <div class="row mt-2">
+          <div class="opis center text-center">
+              <span class="name">Mateusz Zając</span><br>
+              <span class="mention">Web Developer</span>
+          </div>
+      </div>
+      <div class="row mt-5" style="padding-bottom: 100px;">
+        <blockquote class="center">Jeśli zamkniesz oczy i szeroko otworzysz umysł to wszystko jest możliwe. ~ <i>Autor nieznany</i></blockquote>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENU -->
+  <div class="container-fluid">
+    <div class="row row-menu center">
+      <div class="center">
+      <nav class="nav" style="margin-top: -45px;">
+          <input type="checkbox" class="nav__cb" id="menu-cb"/>
+          <div class="nav__content">
+            <ul class="nav__items">
+              <li class="nav__item">
+                <span class="nav__item-text" onclick="zmiana('o-mnie')">
+                  Start
+                </span>
+              </li>
+              <li class="nav__item">
+                <span class="nav__item-text" onclick="zmiana('o-mnie')">
+                  O mnie
+                </span>
+              </li>
+              <li class="nav__item">
+                <span class="nav__item-text" onclick="zmiana('portfolio')">
+                  Portfolio
+                </span>
+              </li>
+              <li class="nav__item">
+                <span class="nav__item-text" onclick="zmiana('kontakt')">
+                  Kontakt
+                </span>
+              </li>
+            </ul>
+          </div>
+          <label class="nav__btn" for="menu-cb"></label>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- END MENU -->
+
+  <section id="o-mnie">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 myPhoto">
+          <figure>
+            <img src="hugh-jackman.jpg" alt="hugh-jackman">
+            <figcaption><i>Moja osoba *koloryzowane*</i></figcaption>
+          </figure>
+        </div>
+        <div class="col-md-9"><p>Cześć, nazywam się Mateusz Zając. Jestem web developerem. Uwielbiam kosmos oraz swoją piękną dziewczynę. Moim ulubionym aktorem jest Hugh Jackman.</p>
+        <p>Lorem ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+      <div class="container">
+        <div class="row" style="height: 20px;">
+          <header>
+            <h1 class="text-center">Portfolio</h1>
+          </header>
+        </div>
+        <div class="row portfolio-img">
+          <div class="col-md-4">
+            <figure>
+                <img src="pizzeria.png" >
+                <figcaption>Pizzeria</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4">
+              <figure>
+                  <img src="slajd2.jfif" >
+                  <figcaption>Male kotki</figcaption>
+              </figure>  
+          </div>
+          <div class="col-md-4">
+              <figure>
+                  <img src="slajd2.jfif" >
+                  <figcaption>Jeszcze jeden kotek</figcaption>
+              </figure>
+          </div>
+        </div>
+      </div>
+  </section>
+  
+  <section id="kontakt">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+                <form>
+                  <div class="form-group">
+                    <label for="przykladowyEmail">Adres Email</label>
+                    <input type="email" class="form-control" id="przykladowyEmail" placeholder="twojEmail@domena.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="przykladowaTextarea">Przykładowa textarea</label>
+                    <textarea class="form-control" id="przykladowaTextarea" rows="3" placeholder="Napisz do mnie wiadomość. Spokojnie nie gryzę :)"></textarea>
+                  </div>
+                </form>
+            </div>
+            <div class="col-md-5">
+              <p>Jakiś genialny opis mówiacym o tym jak to fajnie się zemną skontakować.</p>
+            </div>>
+          </div>
+        </div>
+  </section>
+
+  <footer>
+    <div class="container-fluid">
+      <hr style="background-color: white;">
+      <div class="row" style="height: 50px; background-color: turquoise;">
+        STOPKA
+      </div>
+    </div>
+  </footer>
+      
+
+</body>
+</html>
+>>>>>>> 842e508acd32786c5190fbb306001b4100703c82
