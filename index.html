@@ -9,6 +9,10 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/f80add4be7.js" crossorigin="anonymous"></script>
+
+    <title>Mateusz Zając - Web Developer</title>
+
     <script type="text/javascript">
       function zmiana(view)
       {
@@ -58,7 +62,7 @@
               </li>
               <li class="nav__item">
                 <span class="nav__item-text" onclick="zmiana('o-mnie')">
-                  O mnie
+                  <a href="#myFooter">O mnie</a>
                 </span>
               </li>
               <li class="nav__item">
@@ -89,8 +93,8 @@
             <figcaption><i>Moja osoba *koloryzowane*</i></figcaption>
           </figure>
         </div>
-        <div class="col-md-9"><p>Cześć, nazywam się Mateusz Zając. Jestem web developerem. Uwielbiam kosmos oraz swoją piękną dziewczynę. Moim ulubionym aktorem jest Hugh Jackman.</p>
-        <p>Nienawidzę lewacta proszę Państwa, dlatego jak mam skręcić w lewo to skręcam 3 razy w prawo.</p>
+        <div class="col-md-9 myDescription"><p>Cześć, nazywam się Mateusz Zając. Jestem web developerem. Uwielbiam kosmos oraz swoją piękną dziewczynę. Moim ulubionym aktorem jest Hugh Jackman.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
     </div>
@@ -107,19 +111,19 @@
           <div class="col-md-4">
             <figure>
                 <img src="img/pizzeria.png" >
-                <figcaption>Pizzeria</figcaption>
+                <figcaption class="figPortfolio">Pizzeria</figcaption>
             </figure>
           </div>
           <div class="col-md-4">
               <figure>
                   <img src="img/slajd2.jfif" >
-                  <figcaption>Male kotki</figcaption>
+                  <figcaption class="figPortfolio">Male kotki</figcaption>
               </figure>  
           </div>
           <div class="col-md-4">
               <figure>
                   <img src="img/slajd2.jfif" >
-                  <figcaption>Jeszcze jeden kotek</figcaption>
+                  <figcaption class="figPortfolio">Jeszcze jeden kotek</figcaption>
               </figure>
           </div>
         </div>
@@ -143,16 +147,17 @@
             </div>
             <div class="col-md-5">
               <p>Jakiś genialny opis mówiacym o tym jak to fajnie się zemną skontakować.</p>
-            </div>>
+            </div>
           </div>
         </div>
   </section>
 
-  <footer>
+  <footer id="myFooter">
     <div class="container-fluid">
-      <hr style="background-color: white;">
-      <div class="row" style="height: 50px; background-color: turquoise;">
-        STOPKA
+      <div class="row" style="height: 50px;">
+      	<div class="col-12">
+      		<div class="socialMedia center text-center"><i class="fab fa-facebook-f"></i></div>
+      	</div>
       </div>
     </div>
   </footer>
