@@ -2,6 +2,8 @@
 <html lang="pl">
 <head>
 
+     <title>Mateusz Zając - Web Developer</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
@@ -10,6 +12,37 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/f80add4be7.js" crossorigin="anonymous"></script>
+<<<<<<< HEAD
+    <script src="js/myScript.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+    <script>
+    jQuery(function($)
+    {
+      //zresetuj scrolla
+      $.scrollTo(0);
+      
+      $('#link-start').click(function() { $.scrollTo($('#top'), 1000); });
+      $('#link-omnie').click(function() { $.scrollTo($('#myFooter'), 1000); });
+      $('#link-portfolio').click(function() { $.scrollTo($('#myFooter'), 1000); });
+      $('#link-kontakt').click(function() { $.scrollTo($('#myFooter'), 1000); });
+    }
+    );
+
+    $(window).scroll(function()
+    {
+      if($(this).scrollTop()>100) $('.scrollup').myFunction123();
+      else $('.scrollup').fadeOut();    
+    }
+    );
+
+    function myFunction123()
+    {
+      alert("12214");
+    }
+  </script>
+=======
 
     <title>Mateusz Zając - Web Developer</title>
 
@@ -32,10 +65,11 @@
       }
     </script>
 
+>>>>>>> 0aeef99060d8286711688bdfe7508c0400e6f155
 </head>
 <body onload="zmiana('o-mnie')">
 
-  <header class="myHeader">
+  <header id="top" class="myHeader">
     <div class="container">
       <div class="row">
         <div class="foto bg-danger center"></div><br>
@@ -61,16 +95,30 @@
           <div class="nav__content">
             <ul class="nav__items">
               <li class="nav__item">
+<<<<<<< HEAD
+                <span id="link-start" class="nav__item-text" onclick="zmiana('o-mnie')">
+                  Start
+=======
                 <span class="nav__item-text" onclick="zmiana('o-mnie')">
                   <a href="#myFooter">Start</a>
+>>>>>>> 0aeef99060d8286711688bdfe7508c0400e6f155
                 </span>
               </li>
               <li class="nav__item">
-                <span class="nav__item-text" onclick="zmiana('o-mnie')">
-                  <a href="#myFooter">O mnie</a>
+                <span id="link-omnie" class="nav__item-text" onclick="zmiana('o-mnie')">
+                  O mnie
                 </span>
               </li>
               <li class="nav__item">
+<<<<<<< HEAD
+                <span id="link-portfolio" class="nav__item-text" onclick="zmiana('portfolio')">
+                  Portfolio
+                </span>
+              </li>
+              <li class="nav__item">
+                <span id="link-kontakt" class="nav__item-text" onclick="zmiana('kontakt')">
+                  Kontakt
+=======
                 <span class="nav__item-text" onclick="zmiana('portfolio')">
                   <a href="#myFooter">Portfolio</a>
                 </span>
@@ -78,6 +126,7 @@
               <li class="nav__item">
                 <span class="nav__item-text" onclick="zmiana('kontakt')">
                   <a href="#myFooter">Kontakt</a>
+>>>>>>> 0aeef99060d8286711688bdfe7508c0400e6f155
                 </span>
               </li>
             </ul>
@@ -164,6 +213,12 @@
   <footer id="myFooter">
     <div class="container">
       <div class="row">
+<<<<<<< HEAD
+        
+        <span class="footer-item facebook">Polajkuj mnie</span>
+        <span class="footer-item instagram">Obserwuj</span>
+        <span class="footer-item twitter">Twittnij</span>
+=======
       	
         <!--<div class="social-media center">
           <div class="social-media-item"><i class="fab fa-facebook-f center" style="color: #fff;"></i></div>
@@ -174,6 +229,7 @@
         <span class="footer-item">someText</span>
         <span class="footer-item">someText</span>
         <span class="footer-item">someText</span>
+>>>>>>> 0aeef99060d8286711688bdfe7508c0400e6f155
          
       </div>
     </div>
