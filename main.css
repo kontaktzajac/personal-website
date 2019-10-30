@@ -75,6 +75,13 @@ blockquote{
             transform: translate3d(-50%, 0, 0);
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
   }
+  .nav a{
+    text-decoration: none;
+    color: grey;
+  }
+ .nav a:hover{
+    color: black;
+  }
   .nav__cb {
     z-index: -1000;
     position: absolute;
@@ -116,9 +123,6 @@ blockquote{
             perspective: 1000px;
     transition: color 0.3s;
     cursor: pointer;
-  }
-  .nav__item:hover {
-    color: #00bdea;
   }
   .nav__item-text {
     display: block;
@@ -202,7 +206,7 @@ blockquote{
   /*====================================== O mnie =======================*/
 
 #o-mnie .row, #portfolio .row, #kontakt .row{
-  height: 600px;
+  min-height: 600px;
   padding-top: 150px;
   color: #fff;
   text-align: center;
@@ -225,8 +229,8 @@ blockquote{
 
 .myDescription{
   font-size: 18px;
+  display: none;
   animation-name: myDescriptionAnimation;
-  animation-delay: 4s;
   animation-duration: 4s; 
 }
 
@@ -256,15 +260,41 @@ blockquote{
 }
 
 /*===================== footer ==================*/
-.socialMedia{
+
+/*.social-media{
+  width: 450px;
+  height: auto;
+}
+
+.social-media-item{
   width: 100px;
   height: 100px;
   border: 1px solid #fff;
   border-radius: 50%;
-  color: #fff;
-  font-size: 2.5em;
-  line-height: 90px;
+  display: inline-block;
+  margin-right: 10px;
 }
+
+.social-media-item:last-child{
+  margin-right: 0px;
+}*/
+
+#myFooter .container .row{
+  height: 50px; 
+  border-top: 1px solid #dfdddd;"
+}
+
+.footer-item{
+  color: #dfdfdf;
+  opacity: 0.7;
+  font-size: 1.5em;
+  margin: 0 auto;
+}
+
+.footer-item:hover{
+  opacity: 1;
+}
+
 
 /*===================== END footer ==================*/
 /*======================= Animations ==============*/
