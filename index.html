@@ -4,6 +4,8 @@
 
      <title>Mateusz Zając - Web Developer</title>
 
+     <meta charset="utf-8">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
@@ -12,8 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/f80add4be7.js" crossorigin="anonymous"></script>
-<<<<<<< HEAD
-    <script src="js/myScript.js"></script>
+    <script src="myScript.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="jquery.scrollTo.min.js"></script>
@@ -30,44 +31,28 @@
     }
     );
 
-    $(window).scroll(function()
-    {
-      if($(this).scrollTop()>100) $('.scrollup').myFunction123();
-      else $('.scrollup').fadeOut();    
-    }
-    );
-
-    function myFunction123()
-    {
-      alert("12214");
-    }
+ $(document).ready(function() {
+  var NavY = $('.myFuckingMenu').offset().top;
+   
+  var stickyNav = function(){
+  var ScrollY = $(window).scrollTop();
+      
+  if (ScrollY > NavY) { 
+    $('.myFuckingMenu').addClass('sticky');
+  } else {
+    $('.myFuckingMenu').removeClass('sticky'); 
+  }
+  };
+   
+  stickyNav();
+   
+  $(window).scroll(function() {
+    stickyNav();
+  });
+  });
   </script>
-=======
-
-    <title>Mateusz Zając - Web Developer</title>
-
-    <script type="text/javascript">
-      function zmiana(view)
-      {
-        var wyswietl = view;
-
-        document.getElementById("o-mnie").style.display = "none";
-        document.getElementById("portfolio").style.display = "none";
-        document.getElementById("kontakt").style.display = "none";
-
-        document.getElementById(wyswietl).style.display = "block";
-
-        if(wyswietl=="o-mnie")
-        {
-          setTimeout(function(){ document.getElementById("myDescriptionID").style.display = "block"; }, 4000);
-        }
-
-      }
-    </script>
-
->>>>>>> 0aeef99060d8286711688bdfe7508c0400e6f155
 </head>
-<body onload="zmiana('o-mnie')">
+<body>
 
   <header id="top" class="myHeader">
     <div class="container">
@@ -87,21 +72,16 @@
   </header>
 
   <!-- MENU -->
-  <div class="container-fluid">
+  <div class="container-fluid myFuckingMenu">
     <div class="row row-menu center">
       <div class="center">
-      <nav class="nav" style="margin-top: -45px;">
+      <nav class="nav" >
           <input type="checkbox" class="nav__cb" id="menu-cb"/>
           <div class="nav__content">
             <ul class="nav__items">
               <li class="nav__item">
-<<<<<<< HEAD
-                <span id="link-start" class="nav__item-text" onclick="zmiana('o-mnie')">
+                <span id="link-start" class="nav__item-text" onclick="zmiana('start');schowaj();">
                   Start
-=======
-                <span class="nav__item-text" onclick="zmiana('o-mnie')">
-                  <a href="#myFooter">Start</a>
->>>>>>> 0aeef99060d8286711688bdfe7508c0400e6f155
                 </span>
               </li>
               <li class="nav__item">
@@ -110,7 +90,6 @@
                 </span>
               </li>
               <li class="nav__item">
-<<<<<<< HEAD
                 <span id="link-portfolio" class="nav__item-text" onclick="zmiana('portfolio')">
                   Portfolio
                 </span>
@@ -118,28 +97,30 @@
               <li class="nav__item">
                 <span id="link-kontakt" class="nav__item-text" onclick="zmiana('kontakt')">
                   Kontakt
-=======
-                <span class="nav__item-text" onclick="zmiana('portfolio')">
-                  <a href="#myFooter">Portfolio</a>
-                </span>
-              </li>
-              <li class="nav__item">
-                <span class="nav__item-text" onclick="zmiana('kontakt')">
-                  <a href="#myFooter">Kontakt</a>
->>>>>>> 0aeef99060d8286711688bdfe7508c0400e6f155
                 </span>
               </li>
             </ul>
           </div>
-          <label class="nav__btn" for="menu-cb"></label>
+          <label id="nav__trigger" class="nav__btn" for="menu-cb"></label>
         </nav>
       </div>
     </div>
   </div>
   <!-- END MENU -->
 
+  <section id="start">
+    <div class="container">
+      <div style="height: 966px;"></div>
+    </div>
+  </section>
+
   <section id="o-mnie">
     <div class="container">
+      <div id="omnie-header" class="row">
+        <header>
+          <h1 class="text-center">Kilka słów o mojej osobie</h1>
+        </header>
+      </div>
       <div class="row">
         <div class="col-md-3 myPhoto">
           <figure>
@@ -156,28 +137,37 @@
 
   <section id="portfolio">
       <div class="container">
-        <div class="row" style="height: 20px;">
+        <div id="portfolio-header" class="row">
           <header>
             <h1 class="text-center">Portfolio</h1>
           </header>
         </div>
-        <div class="row portfolio-img">
+        <div class="row portfolio-images">
           <div class="col-md-4">
             <figure>
-                <img src="img/pizzeria.png" >
+                <div class="portfolio-img">
+                  <a href="#"><img src="img/pizzeria.jpg"></a>
+                  <a href="#" class="portfolio-link"><i class="fas fa-search"></i></a>
+                </div>
                 <figcaption class="figPortfolio">Pizzeria</figcaption>
             </figure>
           </div>
           <div class="col-md-4">
               <figure>
-                  <img src="img/slajd2.jfif" >
-                  <figcaption class="figPortfolio">Male kotki</figcaption>
+                <div class="portfolio-img">
+                  <a href="#"><img src="img/slajd2.jfif" ></a>
+                  <a href="#" class="portfolio-link"><i class="fas fa-search"></i></a>
+                </div>
+                <figcaption class="figPortfolio">Male kotki</figcaption>
               </figure>  
           </div>
           <div class="col-md-4">
               <figure>
-                  <img src="img/slajd2.jfif" >
-                  <figcaption class="figPortfolio">Jeszcze jeden kotek</figcaption>
+                <div class="portfolio-img">
+                  <a href="#"><img src="img/slajd2.jfif" ></a>
+                  <a href="#" class="portfolio-link"><i class="fas fa-search"></i></a>
+                </div>
+                <figcaption class="figPortfolio">Jeszcze jeden kotek</figcaption>
               </figure>
           </div>
         </div>
@@ -186,50 +176,41 @@
   
   <section id="kontakt">
       <div class="container">
-          <div class="row">
-            <div class="col-md-5">
-                <form action="#">
-                  <div class="form-group">
-                    <label for="email">Adres Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="twojEmail@domena.com">
-                  </div>
-                  <div class="form-group">
-                    <label for="message">Przykładowa textarea</label>
-                    <textarea class="form-control" id="message" rows="3" placeholder="Napisz do mnie wiadomość. Spokojnie nie gryzę :)"></textarea>
-                  </div>
-                  <div class="form-group">
-                    <label for="send">Adres Email</label>
-                    <input type="submit" class="form-control" id="send" value="Wyślij">
-                  </div>
-                </form>
-            </div>
-            <div class="col-md-5">
-              <p>Jakiś genialny opis mówiacym o tym jak to fajnie się zemną skontakować.</p>
-            </div>
+        <div id="kontakt-header" class="row">
+          <header>
+            <h1 class="text-center">Napisz do mnie</h1>
+          </header>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+              <form action="animacja-rakiety.html">
+                <div class="form-group">
+                  <label for="email"><h2>Adres Email</h2></label>
+                  <input type="email" class="form-control" id="email" placeholder="twojEmail@domena.com">
+                </div>
+                <div class="form-group">
+                  <label for="message"><h2>Przykładowa textarea</h2></label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="Napisz do mnie wiadomość. Spokojnie nie gryzę :)"></textarea>
+                </div>
+                <div class="form-group">
+                  <input type="submit" class="form-control" value="Wyślij">
+                </div>
+              </form>
+          </div>
+          <div class="col-md-5">
+            <p>Jakiś genialny opis mówiacym o tym jak to fajnie się zemną skontakować.</p>
           </div>
         </div>
+      </div>
   </section>
 
   <footer id="myFooter">
     <div class="container">
       <div class="row">
-<<<<<<< HEAD
         
         <span class="footer-item facebook">Polajkuj mnie</span>
         <span class="footer-item instagram">Obserwuj</span>
         <span class="footer-item twitter">Twittnij</span>
-=======
-      	
-        <!--<div class="social-media center">
-          <div class="social-media-item"><i class="fab fa-facebook-f center" style="color: #fff;"></i></div>
-          <div class="social-media-item"></div>
-          <div class="social-media-item"></div>
-          <div class="social-media-item"></div>
-        </div>-->
-        <span class="footer-item">someText</span>
-        <span class="footer-item">someText</span>
-        <span class="footer-item">someText</span>
->>>>>>> 0aeef99060d8286711688bdfe7508c0400e6f155
          
       </div>
     </div>
