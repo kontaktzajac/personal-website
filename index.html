@@ -25,22 +25,22 @@
       $.scrollTo(0);
       
       $('#link-start').click(function() { $.scrollTo($('#top'), 1000); });
-      $('#link-omnie').click(function() { $.scrollTo($('#myFooter'), 1000); });
-      $('#link-portfolio').click(function() { $.scrollTo($('#myFooter'), 1000); });
-      $('#link-kontakt').click(function() { $.scrollTo($('#myFooter'), 1000); });
+      $('#link-omnie').click(function() { $.scrollTo($('#omnie-header'), 1000); });
+      $('#link-portfolio').click(function() { $.scrollTo($('#portfolio-header'), 1000); });
+      $('#link-kontakt').click(function() { $.scrollTo($('#kontakt-header'), 1000); });
     }
     );
 
  $(document).ready(function() {
-  var NavY = $('.myFuckingMenu').offset().top;
+  var NavY = $('.myMenu').offset().top;
    
   var stickyNav = function(){
   var ScrollY = $(window).scrollTop();
       
   if (ScrollY > NavY) { 
-    $('.myFuckingMenu').addClass('sticky');
+    $('.myMenu').addClass('sticky');
   } else {
-    $('.myFuckingMenu').removeClass('sticky'); 
+    $('.myMenu').removeClass('sticky'); 
   }
   };
    
@@ -72,7 +72,7 @@
   </header>
 
   <!-- MENU -->
-  <div class="container-fluid myFuckingMenu">
+  <div class="container-fluid myMenu">
     <div class="row row-menu center">
       <div class="center">
       <nav class="nav" >
@@ -85,17 +85,17 @@
                 </span>
               </li>
               <li class="nav__item">
-                <span id="link-omnie" class="nav__item-text" onclick="zmiana('o-mnie')">
+                <span id="link-omnie" class="nav__item-text" onclick="zmiana('o-mnie');schowaj();">
                   O mnie
                 </span>
               </li>
               <li class="nav__item">
-                <span id="link-portfolio" class="nav__item-text" onclick="zmiana('portfolio')">
+                <span id="link-portfolio" class="nav__item-text" onclick="zmiana('portfolio');schowaj();">
                   Portfolio
                 </span>
               </li>
               <li class="nav__item">
-                <span id="link-kontakt" class="nav__item-text" onclick="zmiana('kontakt')">
+                <span id="link-kontakt" class="nav__item-text" onclick="zmiana('kontakt');schowaj();">
                   Kontakt
                 </span>
               </li>
@@ -198,7 +198,7 @@
               </form>
           </div>
           <div class="col-md-5">
-            <p>Jakiś genialny opis mówiacym o tym jak to fajnie się zemną skontakować.</p>
+              <span>Jakiś genialny opis mówiacym o tym jak to fajnie się zemną skontakować.</span>
           </div>
         </div>
       </div>
