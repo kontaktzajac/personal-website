@@ -1,0 +1,47 @@
+.rocket{
+  width: 600px;
+  height: 50px; 
+  margin-top: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
+
+.rocket a{
+	text-decoration: none;
+	width: 150px;
+    height: 50px;
+    background: transparent;
+    border: 3px solid #F0F0F0;
+    color: #fff;
+    text-align: center;
+	font-size: 30px;
+	line-height: 120%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 100px;
+}
+
+.rocket a:hover{
+	background-color: #fff;
+		color: #000;
+}
+
+
+.flyingRocket
+{
+	transform: scale(0.5) rotate(90deg);
+	animation: flyingRocketAnimation;
+	animation-delay: 1s;
+	animation-duration: 8s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	position: fixed;
+	top: 20%;
+	left: -30%;
+}
+
+@keyframes flyingRocketAnimation{
+	from {left: 0%; width: 10%;}
+	to {left: 100%; width: 30%;}
+}
