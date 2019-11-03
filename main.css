@@ -299,6 +299,10 @@ a{
   line-height: 300%;
   opacity: 1;
  }
+
+ .figPortfolio{
+  font-size: 20px;
+ }
 /*====================== END portfolio ===============*/
 /*====================== kontakt ===============*/
 
@@ -336,6 +340,8 @@ a{
 
 .contactForm{
   width: 40%;
+  animation: kontaktAnimation;
+  animation-duration: 4s;
 }
 
 /*====================== END kontakt ======================*/
@@ -353,7 +359,7 @@ a{
 }
 
 .footer-item:hover{
-  opacity: 1;
+  cursor: pointer;
 }
 
 .facebook:hover{
@@ -381,6 +387,11 @@ a{
 }
 
 @keyframes myDescriptionAnimation{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes kontaktAnimation{
   from {opacity: 0;}
   to {opacity: 1;}
 }
